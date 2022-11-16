@@ -6,7 +6,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-    
+
+  
 body {
     width: 100vw;
     height: 100vh;
@@ -41,12 +42,12 @@ body {
   tbody tr td {
     vertical-align: text-top;
     padding: 6px;
-    max-width: 50px;
+    max-width: 250px;
   }
   
   thead tr th {
     padding: 5px;
-    text-align: start;
+    text-align: center;
     margin-bottom: 50px;
   }
   
