@@ -1,5 +1,5 @@
 
-
+/*
 * {
     margin: 0;
     padding: 0;
@@ -33,10 +33,10 @@ body {
     border-bottom: 1px solid rgb(85, 219, 58)!important;
   }
   table tr:nth-child(odd){ /*odd aplicado a todos os elementos pares*/
-    background-color: #b1e8d0;
+  /*  background-color: #b1e8d0;
   }
   table tr:nth-child(even){  /*even aplicado a todos os elementos pares*/
-    background-color: #d2f4e7
+ /*   background-color: #d2f4e7
   }
 
   tbody tr td {
@@ -54,3 +54,87 @@ body {
   tbody tr {
     margin-bottom: 50px;
   }
+*/
+
+*{
+  margin:0
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+header{
+  background-color: rgb(52, 231, 120);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  padding: 30px 50px;
+}
+
+.card{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.lineInput{
+  display: grid;
+  margin-bottom: 10px;
+}
+
+input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
+}
+
+button{
+  border: 0px;
+  padding: 10px;
+  outline: 0;
+  background-color: rgb(52, 231, 120);
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all ease 0.3s;
+
+}
+
+button:hover{
+  background-color:rgb(23, 192, 88);
+}
+
+.content{
+  margin-top: 15px;
+}
+
+table{
+  border-collapse: collapse;  /*Troca a borda para uma mais simples*/
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+table th{
+  background-color: rgb(204, 204, 204);
+
+}
+
+table td, th{
+  text-align: left;
+  padding: 1px 5px;
+}
+
+table td img {
+  width: 20px;
+}
+
+.center {
+  text-align: center;  /*Classe criada pra alinhar o texto sempre no centro*/
+}

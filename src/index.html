@@ -6,42 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cadastro de Pacientes</title>
     <link rel ="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-    <header></header>
-    <main></main>
-    <script src="./index.js"></script>
-        <div class="divTable">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                        <th>CPF</th>
-                        <th>Idade</th>
-                        <th class="acao">Editar</th>
-                        <th class="acao">Excluir</th>
-                    </tr>
-                                      
-                </thead>
+    <header>
+        <h1>Controle de Pacientes</h1>
+    </header>
+    <main>
+        <div calss="title">
+            <h2>Pacientes</h2>
+            <span>Lista de pacientes</span>
+        </div>
 
+        <div class="card">
+
+            <div class="lineInput">
+                <label>Nome</label>
+                <input type="text" id="paciente" placeholder="Nome do paciente">
+            </div>
+
+            <div class="lineInput">
+                <label>Dia do Pagamento</label>
+                <input type="text" id="dia" placeholder="Dia do pagamento">
+            </div>
+
+            <div class="lineInput">
+                <label>Valor</label>
+                <input type="text" id="valor" placeholder="Valor da mensalidade">
+            </div>
+
+        
+            
+            <button onclick="paciente.salvar()">Salvar</button>
+            <button onclick="paciente.cancelar()">Cancelar</button>
+        </div>
+        
+        <div class ="content">
+            <table border="1">
+                <thead>
+                    <th class = "center">ID</th>
+                    <th>Nome</th>
+                    <th>Dia</th>
+                    <th>Valor</th>
+                    <th class = "center">Ações</th>
+                </thead>
                 <tbody>
-                    <tr>
-                        <td>Erick</td>
-                        <td>Mendonça</td>
-                        <td>12121212121</td>
-                        <td>31</td>
-                    </tr>
-                    <tr>
-                        <td>Erick</td>
-                        <td>Mendonça</td>
-                        <td>12121212121</td>
-                        <td>31</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
+    </main>
+    
         
 </body>
 </html>
