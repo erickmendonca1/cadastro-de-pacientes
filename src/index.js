@@ -1,52 +1,57 @@
-alert("Iniciaremos o cadastro do paciente!")
-//Apenas testando a inserção de dados
-
-let lista = []
-
-let opcao = 0
-
-do{
-
-opcao = prompt("PACIENTES CADASTRADOS: " + lista.length + "\n\nEscolha uma opção: \n 1 - Inserir Paciente \n 2 - Remover Paciente \n 3 - Exibir Pacientes \n 4 - Sair")
-        
-        switch (opcao){
-
-        case "1":
-            const paciente = {}
-
-            paciente.primeiroNome = prompt("Insira o seu primeiro nome: ")
-            paciente.sobrenome = prompt("Insira o seu sobrenome: ")
-            paciente.cpf = prompt("Insira o CPF do paciente: ")
-            paciente.idade = prompt("Insira idade do paciente: ")
-            paciente.idade = parseInt(paciente.idade)   
-            
-            const confirmacao = confirm(
-                "Salvar paciente? \n" +
-                "\n Nome: " + paciente.primeiroNome +
-                "\n Sobrenome: " + paciente.sobrenome +
-                "\n CPF: " + paciente.cpf +
-                "\n Idade: " + paciente.idade
-            )
-            if(confirmacao){
-                lista.push(paciente)
-            }
-            console.table(paciente)
-
-        break
-
-        case "2":
-        break
-
-        case "3":
-            
-        break
-
-        case "4":
-            alert("Opção Sair Escolhida")
-        break
-
-        default:
-        alert("Nenhuma opção válida...")
-        break
+class Paciente{
+    constructor(){
+        this.id = 1;
+        this.arrayPacientes = []
+    
     }
-} while (opcao!=="4")
+        
+    salvar(){
+       let paciente = this.lerDados();
+
+       this.validaCampos(paciente);
+
+       console.log(paciente);
+    }
+
+    lerDados(){
+        let paciente = {}
+
+        paciente.id = this.id;
+        paciente.nome = document.getElementById("nome").value;
+        paciente.dia = document.getElementById("dia").value;
+        paciente.valor = document.getElementById("valor").value;
+
+        return paciente;
+       
+
+    }
+
+    validaCampos(paciente){
+        let msg = " ";
+        
+        if(paciente.nome==" "){
+            msg += "Informe o Nome do Paciente\n"
+        }
+
+        if(paciente.dia==" "){
+            msg += "Informe o dia de pagamento\n"
+        }
+        if(paciente.valor==" "){
+            msg += "Informe o valor\n"
+        }
+
+
+        if (msg != " "){
+            alert(msg)
+            return false
+        }
+
+        return true
+    }
+
+    cancelar(){
+       
+    }
+}
+
+var paciente = new Paciente()
