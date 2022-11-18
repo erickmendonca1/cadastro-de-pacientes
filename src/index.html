@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cadastro de Pacientes</title>
     <link rel ="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src ="index.js"></script>
 
 </head>
 <body>
@@ -24,10 +25,9 @@
         </div>
 
         <div class="card">
-
             <div class="lineInput">
                 <label>Nome</label>
-                <input type="text" id="nome" placeholder="Nome do paciente">
+                <input type="text" id="nomePaciente" placeholder="Nome do paciente">
             </div>
 
             <div class="lineInput">
@@ -53,7 +53,7 @@
                     <th>Valor</th>
                     <th class = "center">Ações</th>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     
                 </tbody>
             </table>
