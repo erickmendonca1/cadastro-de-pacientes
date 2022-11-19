@@ -108,8 +108,8 @@ class Paciente{
         if(paciente.dia=="" || paciente.dia < 1 || paciente.dia > 31){
             msg += "Informe o dia de pagamento entre 1 e 31\n"
         }
-        if(paciente.valor==""){
-            msg += "Informe o valor\n"
+        if(paciente.valor=="" || paciente.valor < 0){
+            msg += "Informe um valor. O valor deve ser maior ou igual a zero.\n"
         }
         if (msg != ""){
             alert(msg)
