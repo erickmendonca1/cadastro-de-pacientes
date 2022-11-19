@@ -1,6 +1,11 @@
 # Sistema de Cadastro de Pacientes
 
-Esse é um sistema simples para cadastrar pacientes em uma clínica
+Esse é um sistema simples para cadastrar pacientes em uma clínica. 
+
+Objetivo é ter um controle financeiro de quantos pacientes internados existem, 
+qual valor cada paciente paga mensalmente e qual o dia do pagamento desse paciente.
+
+O sistema deve ter a opção de editar e remover pacientes.
 
 ### Tarefas:
 
@@ -10,4 +15,6 @@ Esse é um sistema simples para cadastrar pacientes em uma clínica
 [x] Estilizar a tabela
 [x] Adicionar pacientes dinamicamente
 [x] Remover pacientes dinamicamente
-[ ] Editar pacientes dinamicamente
+[x] Editar pacientes dinamicamente
+[ ] Contador de pacientes cadastrados
+[ ] Somatório do valor das mensalidades de cada paciente

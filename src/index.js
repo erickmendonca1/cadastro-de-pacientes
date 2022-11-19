@@ -2,6 +2,7 @@ class Paciente{
     constructor(){
         this.id = 1;
         this.arrayPacientes = [];
+        this.editId = null;
           
     }
         
@@ -10,8 +11,12 @@ class Paciente{
        let paciente = this.lerDados();
 
        if(this.validaCampos(paciente)){
+            if(this.editId==null){
             this.adicionar(paciente);
-       }
+           } else {
+            this.atualizar(this.editId, paciente);
+           }
+        }
 
        this.listaTabela();
        this.cancelar();
@@ -40,6 +45,7 @@ class Paciente{
 
             let imgEdit = document.createElement("img");
             imgEdit.src = "img/edit.png";
+            imgEdit.setAttribute("onclick", "paciente.preparaEdicao("+ JSON.stringify(this.arrayPacientes[i]) +")");
 
             let imgDelete = document.createElement("img");
             imgDelete.src = "img/delete.png";
@@ -53,8 +59,31 @@ class Paciente{
     }
 
     adicionar(paciente){
+        paciente.dia = parseFloat(paciente.dia)
+        paciente.valor = parseFloat(paciente.valor)
         this.arrayPacientes.push(paciente);
         this.id++;
+    }
+
+    atualizar(id, paciente){
+        for (let i=0; i<this.arrayPacientes.length; i++){
+            if (this.arrayPacientes[i].id == id){
+                this.arrayPacientes[i].nomePaciente  = paciente.nomePaciente;
+                this.arrayPacientes[i].dia  = paciente.dia;
+                this.arrayPacientes[i].valor  = paciente.valor;
+            }
+        }
+    }
+
+    preparaEdicao(dados){
+        this.editId = dados.id;
+        document.getElementById("nomePaciente").value = dados.nomePaciente;
+        document.getElementById("dia").value = dados.dia;
+        document.getElementById("valor").value = dados.valor;
+
+        document.getElementById("btn1").innerText = "Atualizar";
+
+        alert(dados.id);
     }
 
     lerDados(){
@@ -96,11 +125,16 @@ class Paciente{
         document.getElementById("nomePaciente").value = "";
         document.getElementById("dia").value = "";
         document.getElementById("valor").value = "";
+        document.getElementById("btn1").innerText = "Salvar";
+        this.editId = null;
        
     }
 
     deletar(id){
 
+        if(confirm("Deseja realmente deletar o paciente do ID " +id)){
+
+        
         let tbody = document.getElementById("tbody");
 
         for(let i=0; i < this.arrayPacientes.length; i++){
@@ -110,7 +144,7 @@ class Paciente{
             }
         }
         
-        
+    }
        console.log(this.arrayPacientes)
     }
 }

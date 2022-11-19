@@ -20,8 +20,8 @@
     </header>
     <main>
         <div calss="title">
-            <h2>Pacientes</h2>
-            <span>Lista de pacientes</span>
+            <h2>Controle de Pacientes para Gestão Financeira</h2>
+            <span></span>
         </div>
 
         <div class="card">
@@ -32,15 +32,15 @@
 
             <div class="lineInput">
                 <label>Dia do Pagamento</label>
-                <input type="text" id="dia" placeholder="Dia do pagamento">
+                <input type="number" id="dia" placeholder="Dia do pagamento">
             </div>
 
             <div class="lineInput">
                 <label>Valor</label>
-                <input type="text" id="valor" placeholder="Valor da mensalidade">
+                <input type="number" id="valor" placeholder="Valor da mensalidade">
             </div>         
 
-            <button onclick="paciente.salvar()">Salvar</button>
+            <button onclick="paciente.salvar()" id="btn1">Salvar</button>
             <button onclick="paciente.cancelar()">Cancelar</button>
         </div>
         
