@@ -83,7 +83,6 @@ class Paciente{
         document.getElementById("valor").value = dados.valor;
         document.getElementById("btn1").innerText = "Atualizar";
 
-        alert(dados.id);
     }
 
     lerDados(){
@@ -132,10 +131,8 @@ class Paciente{
 
     deletar(id){
 
-        if(confirm("Deseja realmente deletar o paciente do ID " +id)){
-
-        
-        let tbody = document.getElementById("tbody");
+        if(confirm("Deseja realmente deletar o paciente do ID " +id+ " ?")){
+         let tbody = document.getElementById("tbody");
 
         for(let i=0; i < this.arrayPacientes.length; i++){
             if(this.arrayPacientes[i].id == id){
@@ -148,6 +145,5 @@ class Paciente{
        console.log(this.arrayPacientes)
     }
 }
-
 
 var paciente = new Paciente();
