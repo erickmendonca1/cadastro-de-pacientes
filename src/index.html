@@ -32,7 +32,7 @@
 
             <div class="lineInput">
                 <label>Dia do Pagamento</label>
-                <input type="number" id="dia" placeholder="Dia do pagamento">
+                <input type="number" min ="1" max="31" id="dia" placeholder="Escolha uma data entre 1 e 31">
             </div>
 
             <div class="lineInput">
@@ -42,6 +42,11 @@
 
             <button onclick="paciente.salvar()" id="btn1">Salvar</button>
             <button onclick="paciente.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="card1">
+            <div class ="content">
+                
         </div>
         
         <div class ="content">
@@ -54,10 +59,10 @@
                     <th class = "center">Ações</th>
                 </thead>
                 <tbody id="tbody">
-                    
-                </tbody>
+               </tbody>
+                
             </table>
-        </div>
+        </div>        
     </main>
     
         

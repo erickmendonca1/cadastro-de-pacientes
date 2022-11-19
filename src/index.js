@@ -42,6 +42,7 @@ class Paciente{
             td_valor.innerText = this.arrayPacientes[i].valor;
 
             td_id.classList.add("center");
+            td_acoes.classList.add("center");
 
             let imgEdit = document.createElement("img");
             imgEdit.src = "img/edit.png";
@@ -80,7 +81,6 @@ class Paciente{
         document.getElementById("nomePaciente").value = dados.nomePaciente;
         document.getElementById("dia").value = dados.dia;
         document.getElementById("valor").value = dados.valor;
-
         document.getElementById("btn1").innerText = "Atualizar";
 
         alert(dados.id);
@@ -106,8 +106,8 @@ class Paciente{
             msg += "Informe o Nome do Paciente\n"
         }
 
-        if(paciente.dia==""){
-            msg += "Informe o dia de pagamento\n"
+        if(paciente.dia=="" || paciente.dia < 1 || paciente.dia > 31){
+            msg += "Informe o dia de pagamento entre 1 e 31\n"
         }
         if(paciente.valor==""){
             msg += "Informe o valor\n"
