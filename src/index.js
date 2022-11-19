@@ -43,9 +43,11 @@ class Paciente{
 
             let imgDelete = document.createElement("img");
             imgDelete.src = "img/delete.png";
+            imgDelete.setAttribute("onclick", "paciente.deletar("+ this.arrayPacientes[i].id +")");
 
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
+            console.log(this.arrayPacientes);
 
         }
     }
@@ -95,6 +97,21 @@ class Paciente{
         document.getElementById("dia").value = "";
         document.getElementById("valor").value = "";
        
+    }
+
+    deletar(id){
+
+        let tbody = document.getElementById("tbody");
+
+        for(let i=0; i < this.arrayPacientes.length; i++){
+            if(this.arrayPacientes[i].id == id){
+                this.arrayPacientes.splice(i,1);
+                tbody.deleteRow(i);
+            }
+        }
+        
+        
+       console.log(this.arrayPacientes)
     }
 }
 
