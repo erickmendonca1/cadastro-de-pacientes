@@ -1,4 +1,4 @@
-# Sistema de Cadastro de Pacientes
+# Sistema de Cadastro de Pacientes para controle Financeiro
 
 Esse é um sistema simples para cadastrar pacientes em uma clínica. 
 
@@ -16,5 +16,7 @@ O sistema deve ter a opção de editar e remover pacientes.
 [x] Adicionar pacientes dinamicamente
 [x] Remover pacientes dinamicamente
 [x] Editar pacientes dinamicamente
-[ ] Contador de pacientes cadastrados
-[ ] Somatório do valor das mensalidades de cada paciente
+
+Próximas funcionalidades a serem implementadas:
+[ ] Contador de pacientes cadastrados exibido na tela
+[ ] Somatório do valor das mensalidades
